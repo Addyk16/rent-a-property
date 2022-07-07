@@ -158,6 +158,6 @@ export const PropertyDateNew = [...Array(45)].map(() => ({
   image: faker.helpers.arrayElement(imageUrls),
   propertyType: faker.helpers.arrayElement(["House", "Villa", "Flat", "Office Space"]),
   location: faker.helpers.arrayElement(["Delhi", "Gurgaon", "Faridabad", "Noida"]),
-  available: faker.date.between(new Date(), d.setDate(d.getDate() + 200)),
+  available: faker.date.soon(100),
   rent: faker.datatype.number({ min: 10000, max: 100000 }),
 }));
