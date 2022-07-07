@@ -1,4 +1,3 @@
-import "./App.css";
 import { Box, CssBaseline, Divider, Stack } from "@mui/material";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
