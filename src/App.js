@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import { Box, CssBaseline, Divider, Stack } from "@mui/material";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Properties from "./components/Properties";
+import { LocalizationProvider } from "@mui/x-date-pickers";
+import { AdapterDateFns } from "@mui/x-date-pickers/AdapterDateFns";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LocalizationProvider dateAdapter={AdapterDateFns}>
+      <CssBaseline>
+        <Box>
+          <Navbar />
+          <Stack direction="row" justifyContent="space-between" spacing={1} width="100%">
+            <Sidebar />
+            <Divider
+              orientation="vertical"
+              flexItem
+              sx={{ display: { xs: "none", sm: "none", md: "flex" }, minHeight: "100vh" }}
+            />
+            <Properties />
+          </Stack>
+        </Box>
+      </CssBaseline>
+    </LocalizationProvider>
   );
 }
 
