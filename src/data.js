@@ -24,6 +24,11 @@ export const propertyFilterData = [
   },
 ];
 
+export const priceListData = [...Array(19)].map((_, i) => ({
+  value: i / 2 + 1,
+  label: i / 2 + 1 < 10 ? ((i / 2 + 1) * 10000).toLocaleString() : "1 Lakh",
+}));
+
 export const locationData = [
   { key: 1, label: "Delhi" },
   { key: 2, label: "Gurgaon" },

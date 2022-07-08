@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer } from "react";
 import { bookmarkReducer, propertyReducer } from "./Reducers";
-import { PropertyDateNew } from "../data";
+import { priceListData, PropertyDateNew } from "../data";
 
 export const PropertyContext = createContext();
 
@@ -8,13 +8,12 @@ const Context = ({ children }) => {
   const propertyList = PropertyDateNew;
   // console.log(propertyList[0].location);
 
-  const priceList = [];
-  for (let i = 1.0; i <= 10; i += 0.5) {
-    priceList.push({
-      value: i,
-      label: i < 10 ? Number(i * 10000).toLocaleString() : "1 Lakh",
-    });
-  }
+  const priceList = priceListData;
+  // const priceList = [...Array(19)].map((_, i) => ({
+  //   value: i / 2 + 1,
+  //   label: i / 2 + 1 < 10 ? ((i / 2 + 1) * 10000).toLocaleString() : "1 Lakh",
+  // }));
+
   const [state, dispatch] = useReducer(bookmarkReducer, {
     propertyList: propertyList,
     bookmark: [],

@@ -10,6 +10,7 @@ const PriceFilter = () => {
   } = PropertyContextState();
   // console.log(priceList);
   const [sliderOpen, setSliderOpen] = useState(false);
+  // console.log(minPrice);
 
   const valueText = (value) => {
     const newValue = priceList.filter((el) => {

@@ -29,10 +29,11 @@ export const propertyReducer = (state, action) => {
       return { ...state, searchQuery: action.payload };
     case "CLEAR_FILTERS":
       return {
+        ...state,
         location: null,
         date: null,
         minPrice: { value: 1, label: "10,000" },
-        maxPrice: { value: 10, label: "10 Lakh" },
+        maxPrice: { value: 10, label: "1 Lakh" },
         propertyType: null,
       };
     default:
