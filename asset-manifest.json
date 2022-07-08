@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/rent-a-property/static/js/main.31f6c5dc.js",
+    "main.js": "/rent-a-property/static/js/main.1ecfb775.js",
     "index.html": "/rent-a-property/index.html",
-    "main.31f6c5dc.js.map": "/rent-a-property/static/js/main.31f6c5dc.js.map"
+    "main.1ecfb775.js.map": "/rent-a-property/static/js/main.1ecfb775.js.map"
   },
   "entrypoints": [
-    "static/js/main.31f6c5dc.js"
+    "static/js/main.1ecfb775.js"
   ]
 }
