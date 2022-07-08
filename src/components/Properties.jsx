@@ -22,11 +22,9 @@ const Properties = () => {
       });
     }
     if (date && date.toString() !== "Invalid Date") {
-      if (date.getTime >= new Date().setHours(0, 0, 0, 0)) {
-        filteredPropertyList = filteredPropertyList.filter((prop) => {
-          return prop.available.setHours(0, 0, 0, 0).getTime() <= date.getTime();
-        });
-      }
+      filteredPropertyList = filteredPropertyList.filter((prop) => {
+        return prop.available.getTime() <= date.getTime();
+      });
     }
     filteredPropertyList = filteredPropertyList.filter((prop) => {
       return minPrice.value * 10000 <= prop.rent && prop.rent <= maxPrice.value * 10000;
@@ -44,10 +42,10 @@ const Properties = () => {
 
   return (
     <Box flex={8} py={2}>
+      <Typography fontSize={15} color="rgba(0,0,0,0.4)">
+        Search Results: {transformPropertyList().length}
+      </Typography>
       <Box display="flex" direction="row" flexWrap="wrap" justifyContent="space-evenly">
-        {transformPropertyList().map((prop) => {
-          return <SingleProperty property={prop} key={prop.key} />;
-        })}
         {transformPropertyList().length === 0 ? (
           <Typography variant="h4" mt={10}>
             Oops No Results Found !

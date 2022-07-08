@@ -1,89 +1,6 @@
 import { CurrencyRupee, DateRange, HomeWorkOutlined, Place } from "@mui/icons-material";
 import { faker } from "@faker-js/faker";
 
-// // export const propertyData = [
-//   {
-//     key: 1,
-//     title: "Palm Harbour",
-//     desc: "3 BHK, Fully Furnished",
-//     image: "house1.jpg",
-//     propertyType: "House",
-//     location: "Gurgaon",
-//     available: new Date("2022/07/16"),
-//     rent: 35000,
-//   },
-//   {
-//     key: 2,
-//     title: "Las Santos",
-//     desc: "2 BHK, Semi Furnished",
-//     image: "house1.jpg",
-//     propertyType: "Flat",
-//     location: "Faridabad",
-//     available: new Date("2022/07/16"),
-//     rent: 35000,
-//   },
-//   {
-//     key: 3,
-//     title: "Beach Drive",
-//     desc: "4 BHK, Fully Furnished",
-//     image: "house1.jpg",
-//     propertyType: "Villa",
-//     location: "Gurgaon",
-//     available: new Date("2022/07/16"),
-//     rent: 35000,
-//   },
-//   {
-//     key: 4,
-//     title: "Park View",
-//     desc: "3 BHK, Fully Furnished",
-//     image: "house1.jpg",
-//     propertyType: "House",
-//     location: "Gurgaon",
-//     available: new Date("2022/07/16"),
-//     rent: 35000,
-//   },
-//   {
-//     key: 5,
-//     title: "Pool Facing",
-//     desc: "3 BHK, Fully Furnished",
-//     image: "house1.jpg",
-//     propertyType: "Office Space",
-//     location: "Gurgaon",
-//     available: new Date("2022/07/16"),
-//     rent: 35000,
-//   },
-//   {
-//     key: 6,
-//     title: "Golf Course",
-//     desc: "3 BHK, Fully Furnished",
-//     image: "house1.jpg",
-//     propertyType: "House",
-//     location: "Gurgaon",
-//     available: new Date("2022/07/16"),
-//     rent: 35000,
-//   },
-//   {
-//     key: 7,
-//     title: "Corner Property",
-//     desc: "3 BHK, Fully Furnished",
-//     image: "house1.jpg",
-//     propertyType: "Flat",
-//     location: "Gurgaon",
-//     available: new Date("2022/07/16"),
-//     rent: 35000,
-//   },
-//   {
-//     key: 8,
-//     title: "Modern Property",
-//     desc: "3 BHK, Fully Furnished",
-//     image: "house1.jpg",
-//     propertyType: "House",
-//     location: "Gurgaon",
-//     available: new Date("2022/07/16"),
-//     rent: 35000,
-//   },
-// ];
-
 export const propertyFilterData = [
   {
     key: 1,
@@ -140,8 +57,6 @@ export const descArray = [
   "2 BHK, Fully Furnished",
 ];
 
-const d = new Date();
-
 const imageUrls = [
   "https://img.freepik.com/premium-photo/3d-rendering-modern-house_62754-1884.jpg?w=1060",
   "https://img.freepik.com/free-photo/house-isolated-field_1303-23773.jpg?t=st=1657234778~exp=1657235378~hmac=d1967bc481fdbea96042e2d7cdddc5dfd00c5e74b54926542b37aa26e9d38983&w=996",
@@ -151,7 +66,7 @@ const imageUrls = [
   "house1.jpg",
 ];
 
-export const PropertyDateNew = [...Array(45)].map(() => ({
+export const PropertyDateNew = [...Array(100)].map(() => ({
   key: faker.datatype.uuid(),
   title: faker.helpers.arrayElement(titleArray),
   desc: faker.helpers.arrayElement(descArray),
